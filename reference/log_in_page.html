@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<!-- saved from url=(0070)https://projects.invisionapp.com/share/QM8E3JL2V#/183765467_GB_Home_Nb -->
+<html lang="en"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+		<title>
+			Joseph Green shared a project with you!
+		</title>
+
+		<!-- Custom webfonts -->
+		<link type="text/css" rel="stylesheet" href="./log_in_page_files/css">
+
+		<!-- Interface styles -->
+		<link type="text/css" rel="stylesheet" href="./log_in_page_files/bootstrap-2.0.4.css">
+		<link rel="stylesheet" type="text/css" href="./log_in_page_files/login.css">
+
+		<!-- Scripts. -->
+		<script type="text/javascript" src="./log_in_page_files/jquery-1.8.2.min.js.download"></script>
+		<script type="text/javascript" src="./log_in_page_files/jquery.placeholder.min.js.download"></script>
+		<script type="text/javascript" src="./log_in_page_files/lodash.min.js.download"></script>
+
+	</head>
+	<body style="background-color: #4d5969">
+
+
+		<!-- The background image. -->
+
+		<img src="./log_in_page_files/share-bg@1x.jpg" id="bg">
+
+
+		<!-- BEGIN: Content Overlay. -->
+		<div id="content">
+
+			<div class="shared">
+
+				<div class="upper">
+
+					<div class="m-avatar system-avatar">
+
+						<span class="rendering">JG</span>
+
+						<img src="./log_in_page_files/00000000-0000-0000-0000000000000004" class="rendering">
+
+					</div>
+
+					<h1>
+						Joseph Green shared a project with you!
+					</h1>
+
+					<h2>
+						Please identify yourself to view the project
+					</h2>
+
+				</div>
+
+				<div class="lower clearfix">
+
+					<div class="thumb">
+						<div class="project" style="background-image: url(&#39;https://s3.invisionapp-cdn.com/storage.invisionapp.com/screens/thumbnails/183765467.png?x-amz-meta-iv=1&amp;response-cache-control=max-age%3D2419200&amp;x-amz-meta-mdi=0&amp;x-amz-meta-ck=ea502ffa9b9ef7c91fe2cf97333d1c8c&amp;AWSAccessKeyId=AKIAJFUMDU3L6GTLUDYA&amp;Expires=1477972800&amp;Signature=OX9N1ijYIZXeR6BTdbsmOFmhuE4%3D&#39;)"></div>
+					</div>
+
+					<form id="share-form" action="https://projects.invisionapp.com/share/QM8E3JL2V#/183765467_GB_Home_Nb" method="post" novalidate="">
+
+						<input type="hidden" name="authForm" value="true">
+
+						<div class="input-layout">
+							<input type="text" required="" class="validate-empty" name="name" id="name" value="">
+						    <span class="highlight"></span>
+						    <span class="bar"></span>
+						    <label>Name</label>
+							<div class="alert alert-error alert-name" style="display: none;">
+								Oops! Name is required.
+							</div>
+						</div>
+
+
+						<div class="input-layout last">
+							<input type="text" required="" class="cleanup validate-empty" name="email" id="email" value="">
+						    <span class="highlight"></span>
+						    <span class="bar"></span>
+						    <label>Email</label>
+						    <!-- Show the error message. -->
+						    <div class="alert alert-error alert-email" style="display: none;">
+								Oops! Email is required.
+							</div>
+						</div>
+
+						<button type="submit" class="primary button">View Project</button>
+
+
+					</form>
+
+				</div><!-- END: lower -->
+
+					<footer>
+
+						<div class="logo">
+							<span class="img"></span>
+						</div>
+
+						<h4>Design Better. Faster. Together.</h4>
+						<h6>The world's leading prototyping, collaboration &amp; workflow platform.</h6>
+
+					</footer>
+
+			</div><!-- END: shared -->
+
+		</div><!-- END:content -->
+
+
+
+		<script type="text/javascript">
+
+			(function() {
+
+				var form = $( "#share-form" );
+
+				var currentAction = form.attr( "action" );
+
+				form.attr( "action", ( currentAction + location.hash ) );
+
+
+			})();
+
+			// Check for empty fields
+
+			$("form").submit(function() {
+
+			    var inputs = $(this).find('.validate-empty');
+			    var areFieldsValid = true;
+
+			    inputs.each(function (el) {
+
+			       if ($(this).val().length === 0) {
+			            $(".alert-" + $(this).attr('id')).show();
+			            $(this).addClass("error");
+			            areFieldsValid = false;
+			        }
+			    });
+
+			    return areFieldsValid;
+
+			    if (areFieldsValid) {
+			      $(this).preventDefault();
+			   }
+			});
+
+			$("input.cleanup").blur(function() {
+		        var value = $.trim( $(this).val() );
+		        $(this).val( value );
+		    });
+
+			// Hide errors on focus
+
+			$(".validate-empty").focus(function () {
+			    $(".alert-" + $(this).attr('id')).hide();
+			    $(".alert-dynamic").hide();
+			    $(this).removeClass("error");
+			});
+
+		</script>
+
+	
+
+</body></html>
